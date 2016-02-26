@@ -1,0 +1,45 @@
+From e910a9eba865e9173c369c8741cdd610afbb1169 Mon Sep 17 00:00:00 2001
+From: Wayne Zhang <wayne.zhang@mail.utoronto.ca>
+Date: Thu, 25 Feb 2016 13:41:41 -0500
+Subject: Changed text of application picker.
+
+
+diff --git a/toolkit/locales/en-US/chrome/mozapps/handling/handling.dtd b/toolkit/locales/en-US/chrome/mozapps/handling/handling.dtd
+index 71afc28..fe7a525 100644
+--- a/toolkit/locales/en-US/chrome/mozapps/handling/handling.dtd
++++ b/toolkit/locales/en-US/chrome/mozapps/handling/handling.dtd
+@@ -4,6 +4,7 @@
+ 
+ <!ENTITY window.emWidth "26em">
+ <!ENTITY window.emHeight "26em">
+-<!ENTITY ChooseApp.description "Choose an Application">
++<!ENTITY ChooseOtherApp.description "Choose other Application">
+ <!ENTITY ChooseApp.label "Choose…">
+ <!ENTITY ChooseApp.accessKey "C">
++<!ENTITY accept "Open link">
+diff --git a/toolkit/mozapps/handling/content/dialog.xul b/toolkit/mozapps/handling/content/dialog.xul
+index 89da1be..4a1bbb8 100644
+--- a/toolkit/mozapps/handling/content/dialog.xul
++++ b/toolkit/mozapps/handling/content/dialog.xul
+@@ -34,7 +34,7 @@
+                  ondblclick="dialog.onDblClick();"
+                  onselect="dialog.updateOKButton();">
+       <richlistitem id="item-choose" orient="horizontal" selected="true">
+-        <label value="&ChooseApp.description;" flex="1"/>
++        <label value="&ChooseOtherApp.description;" flex="1"/>
+         <button oncommand="dialog.chooseApplication();"
+                 label="&ChooseApp.label;" accesskey="&ChooseApp.accessKey;"/>
+       </richlistitem>
+@@ -44,4 +44,9 @@
+   <checkbox id="remember" aria-describedby="remember-text" oncommand="dialog.onCheck();"/>
+   <description id="remember-text"/>
+ 
++  <hbox class="dialog-button-box" align="right">
++    <button dlgtype="cancel" icon="cancel" class="dialog-button"/>
++    <button dlgtype="accept" label="&accept;" icon="open" class="dialog-button"/>
++  </hbox>
++
+ </dialog>
+-- 
+1.9.1
+
