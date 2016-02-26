@@ -17,6 +17,15 @@ According to official comments from the UX team themselves, the desired changes 
 
 Therefore, I will simply follow the official recommendations. I will locate the files responsible for the localization of the Application chooser, and make the necessary localization changes as outlined above.
 
+## Step-by-step ##
+
+1. I need to find the localization file that I need to change. To do so, I will do a recursive grep for some of the text that appear in the Application chooser dialog.
+2. After finding the localization file, I will change *Choose an Application* to *Choose other Application*.
+3. According to the comments, I also need to modify id of the localization. I decided to change `ChooseApp.description` to `ChooseOtherApp.description` based on recommendations in the comments. I also need to modify dialog.xul to reflect this. Luckily, the location of this file was provided in the same comment.
+4. At this point, I discovered that there is nowhere that allows me to change *OK* to *Open link*. My next step is to try and look at several other unrelated dialogs and try to determine how their *OK* button is structured.
+5. Eventually, I find an example dialog that includes an *Open* button instead of an *OK* button. I copy the code from that dialog's xul into the xul for the Application chooser.
+6. I discover that the changes doesn't carry over completely. Primarily, the label stayed as *OK* instead of *Open*. To resolve this, I look at other elements in the xul and decided to simply add a `label` attribute. Secondly, I also needed to make modifications to align the buttons correctly.
+
 # Testing #
 
 In order to validate that the bug was fixed successfully, I will first make sure that Firefox currently does not have a default Mail application set. Then, I will either create or find a webpage that includes a mailto: link. Finally, I will click on the link and observer whether or not the the localization changes went through successfully.
