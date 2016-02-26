@@ -85,4 +85,4 @@ Please observe the following screenshots to see the effects of my changes.
 	+
 	 </dialog>
 
-Alternatively see [Changed-text-of-application-picker.patch](/Changed-text-of-application-picker.patch?raw=true)
+Alternatively see [Changed-text-of-application-picker.patch](/Changed-text-of-application-picker.patch?raw=true).
