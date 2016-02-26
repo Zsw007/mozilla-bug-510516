@@ -33,10 +33,10 @@ Please observe the following screenshots to see the effects of my changes.
 
 # Patch #
 
-	From e910a9eba865e9173c369c8741cdd610afbb1169 Mon Sep 17 00:00:00 2001
-	From: Wayne Zhang <wayne.zhang@mail.utoronto.ca>
-	Date: Thu, 25 Feb 2016 13:41:41 -0500
-	Subject: Changed text of application picker.
+	# HG changeset patch
+	# User Wayne Zhang <wayne.zhang@mail.utoronto.ca>
+
+	Changed text of application picker.
 
 
 	diff --git a/toolkit/locales/en-US/chrome/mozapps/handling/handling.dtd b/toolkit/locales/en-US/chrome/mozapps/handling/handling.dtd
@@ -75,5 +75,4 @@ Please observe the following screenshots to see the effects of my changes.
 	+  </hbox>
 	+
 	 </dialog>
-	-- 
-	1.9.1
+
